@@ -228,7 +228,7 @@ export function createJimp<
       options?: MimeTypeToDecodeOptions
     ) {
       if (Buffer.isBuffer(url) || url instanceof ArrayBuffer) {
-        return this.fromBuffer(url);
+        return this.fromBuffer(url, options);
       }
 
       if (existsSync(url)) {
